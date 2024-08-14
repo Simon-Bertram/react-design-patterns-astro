@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RegularList from "../components/RegularList";
+import NumberedList from "../components/NumberedList";
+import SmallPersonListItem from "../components/people/SmallPersonListItem";
+import LargePersonListItem from "../components/people/LargePersonListItem";
+import SmallProductListItem from "../components/products/SmallProductListItem";
+import LargeProductListItem from "../components/products/LargeProductListItem";
+import Card from "../components/Card.astro";
+import { people } from "../lib/people";
+import { products } from "../lib/products";
+import "../styles/globals.css";
+---
+
+<Layout title="Lists">
+  <main>
+    <div class="container my-16">
+      <h1>People Lists</h1>
+      <RegularList
+        items={people}
+        resourceName="person"
+        itemComponent={SmallPersonListItem}
+      />
+      <NumberedList
+        items={people}
+        resourceName="person"
+        itemComponent={LargePersonListItem}
+      />
+      <h1>Product Lists</h1>
+      <RegularList
+        items={products}
+        resourceName="product"
+        itemComponent={SmallProductListItem}
+      />
+      <RegularList
+        items={products}
+        resourceName="product"
+        itemComponent={LargeProductListItem}
+      />
+      <Card
+        title="Large Product List"
+        imageSrc="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageAlt="Shoes"
+      >
+        <RegularList
+          items={products}
+          resourceName="product"
+          itemComponent={LargeProductListItem}
+        />
+      </Card>
+    </div>
+  </main>
+</Layout>

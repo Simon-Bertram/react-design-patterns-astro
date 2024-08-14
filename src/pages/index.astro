@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Accordian from "../components/Accordian";
+import "../styles/globals.css";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="flex justify-center">
     <div class="container max-w-3xl">
       <div class="prose lg:prose-lg">
-        <h1 class="text-white">React Design Patterns</h1>
-        <p>
+        <h1>React Design Patterns</h1>
+        <p class="prose">
           This is a collection of design patterns for React developers. It's a
           living document that will be updated as new patterns emerge.
         </p>
@@ -40,7 +40,6 @@ import Accordian from "../components/Accordian";
           praesentium unde exercitationem deserunt iusto perferendis repellat.
         </p>
         <h2>Expand these</h2>
-        <Accordian />
       </div>
     </div>
   </main>

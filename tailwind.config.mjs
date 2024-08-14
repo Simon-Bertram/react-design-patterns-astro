@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./pages/**/*.{astro, jsx, ts,tsx}",
+    "./components/**/*.{astro, jsx, ts,tsx}",
+    "./app/**/*.{astro, jsx, ts,tsx}",
+    "./src/**/*.{astro, jsx, ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -14,6 +19,7 @@ export default {
     },
     extend: {},
   },
+  darkMode: ["class"],
   daisyui: {
     themes: ["light", "dark", "cupcake"],
   },
