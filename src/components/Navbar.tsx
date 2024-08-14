@@ -24,19 +24,21 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Homepage</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a>Portfolio</a>
+              <a href="lists">Lists</a>
             </li>
             <li>
-              <a>About</a>
+              <a href="modal">Modal</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">React Design Patterns</a>
+        <a href="/" className="btn btn-ghost text-xl">
+          React Design Patterns
+        </a>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
